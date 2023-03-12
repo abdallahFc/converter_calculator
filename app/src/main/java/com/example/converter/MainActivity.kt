@@ -35,7 +35,7 @@ class MainActivity : AppCompatActivity() {
                     }
                     else {
                         Toast.makeText(this@MainActivity,"Please enter a valid number",Toast.LENGTH_SHORT).show()
-                        binding.binaryEditText.setText("")
+                        binding.binaryEditText.setText(s.toString().subSequence(0, s!!.length-1))
                     }
                 }
                 else if (binding.binaryEditText.hasFocus()&&s.toString().isEmpty()){
@@ -59,7 +59,7 @@ class MainActivity : AppCompatActivity() {
                         binding.hexEditText.setText(convertNum(s.toString(), 10).toString(16))
                     }else{
                         Toast.makeText(this@MainActivity,"Please enter a valid number",Toast.LENGTH_SHORT).show()
-                        binding.decimalEditText.setText("")
+                        binding.decimalEditText.setText(s.toString().subSequence(0, s!!.length-1))
                     }
                 }else if (binding.decimalEditText.hasFocus()&&s.toString().isEmpty()){
                     binding.binaryEditText.setText("")
@@ -81,7 +81,7 @@ class MainActivity : AppCompatActivity() {
                         binding.hexEditText.setText(convertNum(s.toString(), 8).toString(16))
                     }else{
                         Toast.makeText(this@MainActivity,"Please enter a valid number",Toast.LENGTH_SHORT).show()
-                        binding.octalEditText.setText("")
+                        binding.octalEditText.setText(s.toString().subSequence(0, s!!.length-1))
                     }
                 }else if (binding.octalEditText.hasFocus()&&s.toString().isEmpty()){
                     binding.binaryEditText.setText("")
@@ -103,7 +103,7 @@ class MainActivity : AppCompatActivity() {
                         binding.octalEditText.setText(convertNum(s.toString(), 16).toString(8))
                     }else{
                         Toast.makeText(this@MainActivity,"Please enter a valid number",Toast.LENGTH_SHORT).show()
-                        binding.hexEditText.setText("")
+                        binding.hexEditText.setText(s.toString().subSequence(0, s!!.length-1))
                     }
                 }else if (binding.hexEditText.hasFocus()&&s.toString().isEmpty()){
                     binding. binaryEditText.setText("")
